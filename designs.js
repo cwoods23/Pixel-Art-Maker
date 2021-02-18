@@ -20,8 +20,8 @@ function makeGrid(inputHeight, inputWidth) {
         var row = canvas.insertRow(h);
         for (var w= 0; w < inputWidth; w++) {
             var cell = row.insertCell(w);
-            cell.addEventListener("click", function() {
-                this.style.backgroundColor = color.value;
+            cell.addEventListener("click", function(event) {
+                event.target.style.backgroundColor = color.value;
             });
         }
     }
